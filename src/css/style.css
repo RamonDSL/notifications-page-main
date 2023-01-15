@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+    /* Primary*/
+
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+
+    /* Neutral*/
+
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+body p {
+    font-size: 16px;
+}
+
+div.container {
+    box-shadow: -1px 2px 10px rgba(0, 0, 0, 0.377);    
+    padding: 15px;
+    max-width: 640px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+header > div.left > h1 {
+    font-size: 1.2rem;
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+}
+
+header > div.left > h1 > span {
+    color: var(--White);
+    background-color: var(--Blue);
+    border-radius: 8px;
+    padding: 0 12px;
+}
+
+header > div.rigth > p {
+    color: var(--Grayish-blue);
+    font-weight: 800;
+    font-size: .8rem;
+    cursor: pointer;
+}
+header > div.rigth > p:hover {
+    color: var(--Dark-grayish-blue);
+}
+
+main > article.notification {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    margin-block-end: 10px;
+    gap: 10px;
+}
+
+main > article.notification > div.text > div.mensage > h3 {
+    font-size: 1rem;
+    color: var(--Grayish-blue);
+    font-weight: 600;
+}
+
+main > article.notification > div.text > div.mensage > h3 > span.name {
+    color: var(--Very-dark-blue);
+    font-weight: 800;
+}
+
+main > article.notification > div.text > div.mensage > h3 > span.topic {
+    color: var(--Dark-grayish-blue);
+    font-weight: 800;
+}
+
+main > article.notification > div.text > div.mensage > h3 > span.name:hover,
+main > article.notification > div.text > div.mensage > h3 > span.topic:hover {
+    color: var(--Blue);
+}
+
+main > article.notification > div.text > div.time {
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+main > article.notification > div.text > p {
+    color: var(--Dark-grayish-blue);
+    cursor: pointer;
+    border: 1px solid var(--Light-grayish-blue-2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-block-start: 15px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+main > article.notification > div.text > p:hover {
+    background-color: var(--Light-grayish-blue-2);
+}
+
+main > article.notification img.img {
+    width: 45px;
+    align-self: start;
+}
+
+main > article.notification.pendant {
+    background-color: var(--Very-light-grayish-blue);
+}
+
+span.read {
+    display: inline-block;
+    background-color: var(--Red);
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    margin-bottom: 2px;
+    margin-left: 6px;
+}
+
+footer.attribution { 
+    padding: 10px;
+    font-size: 11px; 
+    text-align: center; 
+}
+footer.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+    }
+    div.container { 
+        padding: 25px;
+    }
+    main > article.notification > div.text > div.mensage > h3 {
+        font-size: .9rem;
+    }
+
+    main > article.notification > img.rigth {
+        margin-left: auto;
+    }    
+}
